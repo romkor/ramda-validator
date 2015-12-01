@@ -1,0 +1,30 @@
+{
+  "name": "ramda-validator",
+  "version": "0.0.0",
+  "description": "Functional validation DSL",
+  "main": "ramda-validator.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:romkor/ramda-validator.git"
+  },
+  "keywords": [
+    "ramda",
+    "validation",
+    "functional"
+  ],
+  "author": "Roman Rodych <romko.ua@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/romkor/ramda-validator/issues"
+  },
+  "homepage": "https://github.com/romkor/ramda-validator#readme",
+  "devDependencies": {
+    "webpack": "^1.12.9"
+  },
+  "dependencies": {
+    "ramda": "^0.18.0"
+  }
+}
