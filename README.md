@@ -1,4 +1,5 @@
 # ramda-validator
+[![Build Status](https://travis-ci.org/romkor/ramda-validator.svg?branch=master)](https://travis-ci.org/romkor/ramda-validator)
 
 ## Usage
 
