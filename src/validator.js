@@ -13,10 +13,8 @@ var validatorEngine = function (validation, result, target) {
 };
 
 module.exports = R.curry(function (fns, obj) {
-  return R.reduce(function (acc, validations) {
-    validations.forEach(function (fn) {
-      validatorEngine(fn, acc, obj);
-    });
+  return R.reduce(function (acc, validation) {
+    validatorEngine(validation, acc, obj);
     return acc;
-  }, {valid: true, fields: {}}, fns);
+  }, {valid: true, fields: {}}, R.flatten(fns));
 });
