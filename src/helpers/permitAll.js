@@ -13,7 +13,6 @@ module.exports = function(names) {
   fn["@@field"] = [];
   fn = meta({
     name: "permitParam",
-    field: names
   }, fn);
   return [fn];
 };
