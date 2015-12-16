@@ -1,12 +1,4 @@
 var R = require('ramda');
+var simpleCompareConcernFactory = require('../internal/simpleCompareConcernFactory');
 
-module.exports = R.curry(function (name, value) {
-  var fn = (function (obj) {
-    fn["@@context"] = [obj[name].length, value];
-    return obj[name].length >= value;
-  });
-  fn["@@error"] = "minLength";
-  fn["@@enabled"] = R.T;
-  fn["@@field"] = [name];
-  return [fn];
-});
+module.exports = simpleCompareConcernFactory("minLength", R.length, R.lte);

@@ -1,3 +1,3 @@
 var typeConcernFactory = require('../internal/typeConcernFactory');
 
-module.exports = typeConcernFactory("Number");
+module.exports = typeConcernFactory("String");
