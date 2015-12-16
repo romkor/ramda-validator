@@ -1,5 +1,6 @@
 var R = require('ramda');
 var _key = require('../internal/key');
+var meta = require('../internal/meta');
 
 module.exports = function (name) {
   var fn = function (obj) {
@@ -8,8 +9,9 @@ module.exports = function (name) {
       _key(name), R.isNil, R.not
     )(obj);
   };
-  fn["@@error"] = "required";
-  fn["@@enabled"] = R.T;
-  fn["@@field"] = [name];
+  fn = meta({
+    name: "required",
+    field: name
+  }, fn);
   return [fn];
 };

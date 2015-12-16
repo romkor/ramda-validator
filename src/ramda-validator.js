@@ -2,7 +2,8 @@ module.exports = {
   validator: require("./validator"),
   // Concerns
   required: require("./validations/required"),
-  permitAll: require("./validations/permitAll"),
+  present: require("./validations/required"),
+  permitAll: require("./helpers/permitAll"),
   number: require("./validations/number"),
   min: require("./validations/min"),
   max: require("./validations/max"),
@@ -13,6 +14,7 @@ module.exports = {
   lt: require("./validations/lt"),
   gt: require("./validations/gt"),
   // Helpers
+  compose: require("./helpers/compose"),
   all: require("./helpers/all"),
   field: require("./helpers/field"),
   fields: require("./helpers/fields"),

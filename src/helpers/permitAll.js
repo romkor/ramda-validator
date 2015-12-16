@@ -1,4 +1,5 @@
 var R = require('ramda');
+var meta = require('../internal/meta');
 
 module.exports = function(names) {
   var fn = function (obj) {
@@ -9,9 +10,10 @@ module.exports = function(names) {
       }
     }, true, Object.keys(obj));
   };
-  fn["@@error"] = "permitParam";
-  fn["@@enabled"] = R.T;
   fn["@@field"] = [];
-  fn["@@context"] = [names];
+  fn = meta({
+    name: "permitParam",
+    field: names
+  }, fn);
   return [fn];
 };
